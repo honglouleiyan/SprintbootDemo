@@ -21,7 +21,7 @@ public class Producer {
 
         //设置NameServer地址,此处应改为实际NameServer地址，多个地址之间用；分隔
         //NameServer的地址必须有，但是也可以通过环境变量的方式设置，不一定非得写死在代码里
-        producer2.setNamesrvAddr("110.43.34.130:9876;110.43.34.135:9876");
+        producer2.setNamesrvAddr("10.0.14.79:9876;10.0.14.80:9876");
         producer2.setVipChannelEnabled(false);
 
         //为避免程序启动的时候报错，添加此代码，可以让rocketMq自动创建topickey
@@ -45,9 +45,9 @@ public class Producer {
 
     public static void main(String[] args) {
         try {
-//            for(int i=0;i<10;i++) {
-                send("device_7253724c55d0357142721288", "xxxxxxxxx");
-//            }
+            for(int i=0;i<10;i++) {
+                send("topic_resource_stream", "popopopo"+i);
+            }
         } catch (MQClientException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

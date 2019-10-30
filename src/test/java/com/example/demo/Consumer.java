@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class Consumer {
 
-    private static final String ADDR = "110.43.34.130:9876;110.43.34.135:9876";
+    private static final String ADDR = "10.0.14.79:9876;10.0.14.80:9876";
 
 
     public static void main(String[] args) throws MQClientException {
